@@ -10,7 +10,7 @@ The easiest (and probably worst way) is to simply install Flask with pip.  There
 
 ## Run
 
-    % flask run --host=0.0.0.0
+    % python3 app.py
 
 In your browser, load the page at http://127.0.0.1:5000
 
