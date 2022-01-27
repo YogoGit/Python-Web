@@ -15,7 +15,7 @@ def start():
 
 @app.route("/login", methods = ["POST"])
 def login():
-    # Ensure the username was provied, otherwise redirect them back
+    # Ensure the username was provided, otherwise redirect them back
     username = request.form['username']
     if not username:
         return redirect(url_for('start'))
@@ -31,6 +31,8 @@ def login():
 
 @app.route("/secret")
 def secret():
+    global active_sessions
+
     # Fetch the cookie, so we can determine if they are allowed
     # as well as it allows us to lookup their username.
     session_uuid = session.get('uuid')
